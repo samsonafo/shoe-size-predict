@@ -16,22 +16,18 @@ def home():
 
 
 
-@app.route('/result',  methods=['POST'])
+@app.route('/result',  methods=['POST','GET'])
 def predict():
-    if request.method == 'POST':
-        # get data
-        #data = request.get_json(force=True)
+    # get data and convert data into dataframe
+    height = request.form['height']
+    sex_no = request.form['sex_no']
+    data_df = pd.DataFrame([[height,sex_no]],columns=['height','sex_no'], dtype=)
 
-        # get data and convert data into dataframe
-        height = request.form['height']
-        sex_no = request.form['sex_no']
-        data_df = pd.DataFrame([[height,sex_no]],columns=['height','sex_no'], dtype=int)
+    # predictions
+    result = model.predict(data_df)
 
-        # predictions
-        result = model.predict(data_df)
-
-        # send back to browser
-        output = {'results': int(result[0])}
+    # send back to browser
+    output = {'results': int(result[0])}
 
     # return data
     return render_template("result.html",prediction=result)
