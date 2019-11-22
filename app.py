@@ -16,7 +16,7 @@ def home():
 
 
 
-@app.route('/',  methods=['POST'])
+@app.route('/result',  methods=['POST'])
 def predict():
     if request.method == 'POST':
 
