@@ -9,22 +9,23 @@ model = pickle.load(open('model.pkl','rb'))
 app = Flask(__name__, template_folder='templates')
 
 # routes
-@app.route('/', methods=['GET'])
+@app.route('/',  methods=['GET'])
 
 def home():
     return render_template("home.html")
 
 
 
-@app.route('/result', methods=['POST'])
+@app.route('/result',  methods=['POST'])
 def predict():
     if request.method == 'POST':
         # get data
-        data = request.get_json(force=True)
+        #data = request.get_json(force=True)
 
-        # convert data into dataframe
-        data.update((x, [y]) for x, y in data.items())
-        data_df = pd.DataFrame.from_dict(data)
+        # get data and convert data into dataframe
+        height = request.form['height']
+        sex_no = request.form['sex_no']
+        data_df = pd.DataFrame([[height,sex_no]],columns=['height','sex_no'], dtype=int)
 
         # predictions
         result = model.predict(data_df)
