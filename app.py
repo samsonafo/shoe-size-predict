@@ -27,10 +27,6 @@ def predict():
 
         # predictions
         result = model.predict(data_df)
-
-        # send back to browser
-        output = {'results': int(result[0])}
-
     # return data
     return render_template("result.html",prediction=result)
 
