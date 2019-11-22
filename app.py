@@ -22,7 +22,7 @@ def predict():
     # get data and convert data into dataframe
     height = request.form['height']
     sex_no = request.form['sex_no']
-    data_df = pd.DataFrame([[height,sex_no]],columns=['height','sex_no'], dtype=)
+    data_df = pd.DataFrame([[height,sex_no]],columns=['height','sex_no'])
 
     # predictions
     result = model.predict(data_df)
