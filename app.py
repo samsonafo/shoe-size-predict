@@ -1,7 +1,6 @@
 import pandas as pd
 from flask import Flask, jsonify, request , render_template
 import pickle
-import requests
 
 # load model
 model = pickle.load(open('model.pkl','rb'))
@@ -19,16 +18,18 @@ def home():
 
 @app.route('/result',  methods=['POST'])
 def predict():
-    # get data and convert data into dataframe
-    height = request.form['height']
-    sex_no = request.form['sex_no']
-    data_df = pd.DataFrame([[height,sex_no]],columns=['height','sex_no'])
+    if request.method == 'POST':
 
-    # predictions
-    result = model.predict(data_df)
+        # get data and convert data into dataframe
+        height = request.form['height']
+        sex_no = request.form['sex_no']
+        data_df = pd.DataFrame([[height,sex_no]],columns=['height','sex_no'])
 
-    # send back to browser
-    output = {'results': int(result[0])}
+        # predictions
+        result = model.predict(data_df)
+
+        # send back to browser
+        output = {'results': int(result[0])}
 
     # return data
     return render_template("result.html",prediction=result)
