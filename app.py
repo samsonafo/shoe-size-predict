@@ -26,7 +26,8 @@ def predict():
         data_df = pd.DataFrame([[height,sex_no]],columns=['height','sex_no'])
 
         # predictions
-        result = model.predict(data_df)
+        result = round(model.predict(data_df))
+        
     # return data
     return render_template("result.html",prediction=result)
 
