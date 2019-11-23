@@ -41,11 +41,6 @@ def final():
 @app.route('/get-data',  methods=['GET'])
 
 def getdata():   
-    # get data and convert data into dataframe
-    height = request.form['height']
-    sex_no = request.form['sex_no']
-    shoe_size = request.form['shoe_size']
-    data_save = pd.DataFrame([[height,sex_no,shoe_size]],columns=['height','sex_no','shoe_size'])
     return render_template("get-data.html")
 
 if __name__ == '__home__':
