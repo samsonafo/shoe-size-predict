@@ -1,6 +1,7 @@
 import pandas as pd
 from flask import Flask, jsonify, request , render_template
 import pickle
+import numpy as np
 
 # load model
 model = pickle.load(open('model.pkl','rb'))
@@ -26,7 +27,8 @@ def predict():
         data_df = pd.DataFrame([[height,sex_no]],columns=['height','sex_no'])
 
         # predictions
-        result = model.predict(data_df)
+        output = model.predict(data_df)
+        result = np.int(np.round(output))
         
     # return data
     return render_template("result.html",prediction=result)
