@@ -38,16 +38,14 @@ def predict():
 def final():
     return render_template("final.html")
 
-@app.route('/get-data',  methods=['POST'])
+@app.route('/get-data',  methods=['GET'])
 
-def getdata():
-    if request.method == 'POST':
-        
+def getdata():   
     # get data and convert data into dataframe
-        height = request.form['height']
-        sex_no = request.form['sex_no']
-        shoe_size = request.form['shoe_size']
-        data_save = pd.DataFrame([[height,sex_no,shoe_size]],columns=['height','sex_no','shoe_size'])
+    height = request.form['height']
+    sex_no = request.form['sex_no']
+    shoe_size = request.form['shoe_size']
+    data_save = pd.DataFrame([[height,sex_no,shoe_size]],columns=['height','sex_no','shoe_size'])
     return render_template("get-data.html")
 
 if __name__ == '__home__':
