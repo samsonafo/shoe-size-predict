@@ -33,7 +33,7 @@ def predict():
     # return data
     return render_template("result.html",prediction=result)
 
-@app.route('/final')
+@app.route('/final', methods=['POST','GET'])
 
 def final():
     return render_template("final.html")
