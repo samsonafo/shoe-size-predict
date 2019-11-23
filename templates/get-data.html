@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <style>
+form {
+    margin: auto;
+    width: 35%;
+}
+.result {
+    margin: auto;
+    width: 35%;
+    border: 1px solid #ccc;
+}
+</style>
+   <body>
+       <h1> Oops, We are Sorry we got that wrong</h1>
+       <h2>Could you tell us the right answers?</h2>
+       <div>
+  <form action="/final" method="post">
+    <label for="height">height(cm)</label>
+    <input type="number" id="height" name="height" required="required">
+    <label for="shoe_size">shoe_size(EU)</label>
+    <input type="number" id="shoe_size" name="shoe_size" required="required">
+    <br>
+    <label for="sex_no">Sex</label>
+    <select id="sex_no" name="sex_no" required="required">
+      <option value="1">Male</option>
+      <option value="2">Female</option>
+    </select>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+   </body>
+</html>
