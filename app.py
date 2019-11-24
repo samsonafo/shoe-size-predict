@@ -4,15 +4,16 @@ import pickle
 import numpy as np
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from pprint import pprint
 
 # Connecting to google sheet api
-scope = ['https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive"]
+scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 
-creds = ServiceAccountCredentials.from_json_keyfile_name('shoe-size-predict-406e2a882869.json', scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name('shoe-size.json', scope)
 
-# client = gspread.authorize(creds)
+client = gspread.authorize(creds)
 
-# details = client.open('shoe-size-predict').worksheet('shoe-size-predict')
+details = client.open('shoe-size').sheet1
 
 # load model
 model = pickle.load(open('model.pkl','rb'))
