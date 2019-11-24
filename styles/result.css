@@ -1,0 +1,38 @@
+.main-splash {
+  background-color: #f6f6f6;
+  color: #003f5c;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.highlight {
+  color: #f6f6f6;
+}
+
+#btn{
+  background-color: #003f5c;
+  color: #f6f6f6;
+  border-color: #003f5c;
+}
+
+.one {
+  color: #5f6769
+
+}
+
+#mar {
+  margin-left: 3.5rem;
+}
+
+/* . {
+  color: #ffffff
+  font-weight: bolder;
+} */
+
+
+#texts{
+  justify-content: center;
+  align-items: center;
+}
