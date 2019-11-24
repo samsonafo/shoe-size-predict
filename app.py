@@ -63,11 +63,10 @@ def final():
 @app.route('/get-data',  methods=['POST','GET'])
 
 def getdata():
-    def end():
     final_data = dict(request.args)
-    collect2 = [date_now()]
-    collect2 += list(final_data.values())
-    sheet.insert_row(collect2, 2)
+    collect = [date_now()]
+    collect += list(final_data.values())
+    sheet.insert_row(collect, 2)
     return render_template("get-data.html")
 
 if __name__ == '__home__':

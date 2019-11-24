@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "shoe-size-predict",
+  "private_key_id": "406e2a8828694af575f53314b163d7830d8a175a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCTLOrFdHGowCzZ\nXTx2252Jot3KJf7HTJJtVFHuqcVS88GiCVsBOhF0WIc4HxwVDRpxqZ8NVDCMnIn5\nb3YF5T1ZemZxEpzKbucdgiZd1py0t2SZNHjVuD+EQjfdjXyp8+T5vla5wwShAf50\nLAIAeqXk7AGhp0pyNhLp8rbyxDQNG4C7afjVcMLMAqCYMOLTjjPMzttJ7n5B8MlP\nYOux9AgLQurOE7aZF7ss3r0W4obeb6bwvpwWnxbWBEEX224MickC6dhdhKisIoEM\nXHY8ru3Z8wPadeRoNlLXRbkHiNu0evpDs7mQZNHU4VFYec5PLP0eQvGoqmxa+XN0\nW1iLVbsbAgMBAAECggEAAPgA42P04ufBYEPLywmbX1ydliAAPA1GCUAVyGyrUzug\nFGPqJwy/hhvrvNPjmHz9NBJxJdtB2I3EV9i0sztYc6V+46+KLaucb4LKFYd9D5Qi\nIDhDlyJUSglqNw7ZMmQU4GEUpA/VSbB5D0FCPI8gVsHrm0X26IqM6aemSochipTC\nJ0SJlU8HEH0RqS8NR+e3+tWlyrrJVxL0pG/SXjb2oYgNh4+M/op6Y3vQ4BiI5kU8\n3HALBI7ye+rXGmuEOJZs8He0+QhvxxnGM6nENiGE7Jq27s97i1F4gq1oaE7BzDNR\noQIY+CIQW9NCnJDH0DLtlNAu56bkbp6KuZ7GEGy6yQKBgQDCYC6biPAdf1GeW6gL\nDZkufeAZa+hkjInmYmHuq42U9Qu6t+S652Y42jOm2Pnv13+jM3dWd9vc4yNROG3/\n3MByWGLXikcMi+A5rkzv+3Ul0M6q7u9Y0IYmmYscQXGj+8gyqJtadiIQZPGzFOnu\n8EoiHNSm8bRXrzq6CyAYz34jaQKBgQDB1eSln79+MH19Qa7oz3w6BrjYQn+DyPEH\nFw1YuLpH7yNFjDImARCZUxt+eXhNW/sMAl8JIPnMA28mk+y0Ls8w4bqJClGaKKKQ\noKSM4FwAu+nW2Dkn2WsbTm0vY3NNTt3OTVpjQGslmGI4l/4GrmUL4vFgeQj0a7xY\nDtUrCzAN4wKBgGR4OL8WSh7FF5gGAlcsQThhwfsB5s5KQmE+CybFr9oFy3lI4kal\noxXR247rak1Jk2T1DkM4kwGauj+aLmlpXmP8QaLti4n1pwHJkWUeEdBpHNoHxNmg\ndybuiJQjU60SUMm2kw5wL21P8ArDzaM+uuLlChn8p14HahCN/Zo1bhq5AoGAXMaL\n0dpMRZHf/nvZxATLaNqezqPFdMZQ1xvpf3Wrc5K6Ryd7OUV5NGna1wY81ooX9v+L\njUsDROq/4K8ctIFTGgpwxfbyZ97bMG4zVFpurstCeVq0wKYH5eH70JrBLVd6Qqwz\nfx3uKuhs2rmlFH2UT8Qn1A0ahCKs21j+HsQUFBECgYEAkSN/8biMTIHh2rQzWVfY\nngPLCPHSw1KnxcynIo8xJyBycgNYzoulkSSSKSdb/tR3V1+ifUNaPFKNL3awJnP2\nPe/Vg/coWiQq8Vk4Tlm6lVLKVX1Yl8ATqooVzOLOnLDG2zW1rzQci9SINSj+1eqB\nVjWFyKi0qDmA+KCOivlD1bY=\n-----END PRIVATE KEY-----\n",
+  "client_email": "shoe-size-predict@shoe-size-predict.iam.gserviceaccount.com",
+  "client_id": "114327516751426246987",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/shoe-size-predict%40shoe-size-predict.iam.gserviceaccount.com"
+}
