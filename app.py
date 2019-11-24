@@ -2,6 +2,28 @@ import pandas as pd
 from flask import Flask, jsonify, request , render_template
 import pickle
 import numpy as np
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+from pprint import pprint
+from datetime import datetime
+
+
+# Connecting to google sheet api
+scope = ['https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive"]
+
+creds = ServiceAccountCredentials.from_json_keyfile_name('shoe-size-predict-406e2a882869.json', scope)
+
+client = gspread.authorize(creds)
+
+sheet = client.open('shoe-size-predict').sheet1
+
+
+
+#get current time
+def date_now():
+    now = datetime.now()
+    mydate = datetime.strftime(now , '%Y-%m-%d %H:%M:%S')
+    return mydate
 
 # load model
 model = pickle.load(open('model.pkl','rb'))
@@ -38,9 +60,14 @@ def predict():
 def final():
     return render_template("final.html")
 
-@app.route('/get-data',  methods=['GET'])
+@app.route('/get-data',  methods=['POST','GET'])
 
-def getdata():   
+def getdata():
+    def end():
+    final_data = dict(request.args)
+    collect2 = [date_now()]
+    collect2 += list(final_data.values())
+    sheet.insert_row(collect2, 2)
     return render_template("get-data.html")
 
 if __name__ == '__home__':
