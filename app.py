@@ -11,7 +11,8 @@ app = Flask(__name__, template_folder='templates')
 # routes
 @app.route('/',  methods=['GET'])
 def home():
-    return render_template("home.html")
+    return render_template("home-Copy1.html")
+
 @app.route('/result',  methods=['POST'])
 def predict():
     if request.method == 'POST':
