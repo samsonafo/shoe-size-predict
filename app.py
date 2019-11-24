@@ -3,7 +3,6 @@ from flask import Flask, jsonify, request , render_template
 import pickle
 import numpy as np
 
-
 # load model
 model = pickle.load(open('model.pkl','rb'))
 
