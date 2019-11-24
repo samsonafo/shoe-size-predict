@@ -2,6 +2,17 @@ import pandas as pd
 from flask import Flask, jsonify, request , render_template
 import pickle
 import numpy as np
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
+# Connecting to google sheet api
+scope = ['https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive"]
+
+creds = ServiceAccountCredentials.from_json_keyfile_name('shoe-size-predict-406e2a882869.json', scope)
+
+client = gspread.authorize(creds)
+
+details = client.open('shoe-size-predict').worksheet('shoe-size-predict')
 
 # load model
 model = pickle.load(open('model.pkl','rb'))
