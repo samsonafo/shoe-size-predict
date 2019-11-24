@@ -10,9 +10,9 @@ scope = ['https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.
 
 creds = ServiceAccountCredentials.from_json_keyfile_name('shoe-size-predict-406e2a882869.json', scope)
 
-client = gspread.authorize(creds)
+# client = gspread.authorize(creds)
 
-details = client.open('shoe-size-predict').worksheet('shoe-size-predict')
+# details = client.open('shoe-size-predict').worksheet('shoe-size-predict')
 
 # load model
 model = pickle.load(open('model.pkl','rb'))
