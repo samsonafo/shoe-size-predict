@@ -4,8 +4,6 @@ import pickle
 import numpy as np
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-from pprint import pprint
-from datetime import datetime
 
 
 # Connecting to google sheet api
@@ -17,13 +15,6 @@ client = gspread.authorize(creds)
 
 sheet = client.open('shoe-size-predict').sheet1
 
-
-
-#get current time
-def date_now():
-    now = datetime.now()
-    mydate = datetime.strftime(now , '%Y-%m-%d %H:%M:%S')
-    return mydate
 
 # load model
 model = pickle.load(open('model.pkl','rb'))
@@ -60,7 +51,7 @@ def predict():
 def final():
     return render_template("final.html")
 
-@app.route('/get-data',  methods=['POST','GET'])
+@app.route('/get-data')
 
 def getdata():
     final_data = dict(request.args)
