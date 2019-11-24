@@ -6,14 +6,14 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 
-# Connecting to google sheet api
-scope = ['https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive"]
+# # Connecting to google sheet api
+# scope = ['https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive"]
 
-creds = ServiceAccountCredentials.from_json_keyfile_name('shoe-size-predict-406e2a882869.json', scope)
+# creds = ServiceAccountCredentials.from_json_keyfile_name('shoe-size-predict-406e2a882869.json', scope)
 
-client = gspread.authorize(creds)
+# client = gspread.authorize(creds)
 
-sheet = client.open('shoe-size-predict').sheet1
+# sheet = client.open('shoe-size-predict').sheet1
 
 
 # load model
@@ -54,10 +54,10 @@ def final():
 @app.route('/get-data')
 
 def getdata():
-    final_data = dict(request.args)
-    collect = [date_now()]
-    collect += list(final_data.values())
-    sheet.insert_row(collect, 2)
+#     final_data = dict(request.args)
+#     collect = [date_now()]
+#     collect += list(final_data.values())
+#     sheet.insert_row(collect, 2)
     return render_template("get-data.html")
 
 if __name__ == '__home__':
