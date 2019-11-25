@@ -19,6 +19,12 @@ client = gspread.authorize(creds)
 
 sheet = client.open("shoe-size").sheet1 
 
+#function to get current time
+def date_now():
+    now = datetime.now()
+    mydate = datetime.strftime(now , '%Y-%m-%d %H:%M:%S')
+    return mydate
+
 # app
 app = Flask(__name__, template_folder='templates')
 # routes
@@ -45,7 +51,8 @@ def final():
     height = request.form['height']
     sex_no = request.form['sex_no']
     shoe_size = request.form['shoe_size']
-    collect = [height,sex_no,shoe_size]
+    date_time = date_now()
+    collect = [height,sex_no,shoe_size,date_time]
     sheet.insert_row(collect, 2)
     return render_template("final.html")
 
