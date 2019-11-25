@@ -15,9 +15,9 @@ model = pickle.load(open('model.pkl','rb'))
 
 creds = ServiceAccountCredentials.from_json_keyfile_name('new.json', scope)
 
-client = gspread.authorize(cre
+client = gspread.authorize(creds)
 
-details = client.open('shoe-size').sheet1
+sheet = client.open("shoe-size").sheet1 
 
 # app
 app = Flask(__name__, template_folder='templates')
@@ -44,7 +44,7 @@ def predict():
 def final():
     final_data = dict(request.args)
     collect = list(final_data.values())
-    details.insert_row(collect, 2)
+    sheet.insert_row(collect, 2)
     return render_template("final.html")
 
 @app.route('/get-data',  methods=['GET'])
