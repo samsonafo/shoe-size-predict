@@ -19,7 +19,7 @@ client = gspread.authorize(creds)
 
 sheet = client.open("shoe-size").sheet1 
 
-#function to get current time
+#function to get current time  
 def date_now():
     now = datetime.now()
     mydate = datetime.strftime(now , '%Y-%m-%d %H:%M:%S')
