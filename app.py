@@ -13,7 +13,7 @@ scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/aut
 # load model
 model = pickle.load(open('model.pkl','rb'))
 
-creds = ServiceAccountCredentials.from_json_keyfile_name('shoes.json', scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name('new.json', scope)
 
 client = gspread.authorize(creds)
 

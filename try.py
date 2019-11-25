@@ -4,7 +4,7 @@ from pprint import pprint
 
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
 
-creds = ServiceAccountCredentials.from_json_keyfile_name("shoes.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name("new.json", scope)
 
 client = gspread.authorize(creds)
 
@@ -20,8 +20,6 @@ print(data)
 
 insertRow = [35,4, 23]
 # sheet.add_rows(insertRow, 4)  # Insert the list as a row at index 4
-
-sheet.update_cell(2,2, "CHANGED")  # Update one cell
 sheet.insert_row(insertRow, 2)
 
 # numRows = sheet.row_count  # Get the number of rows in the sheet
