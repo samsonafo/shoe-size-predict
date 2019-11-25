@@ -15,7 +15,7 @@ model = pickle.load(open('model.pkl','rb'))
 
 creds = ServiceAccountCredentials.from_json_keyfile_name('new.json', scope)
 
-client = gspread.authorize(creds)
+client = gspread.authorize(cre
 
 details = client.open('shoe-size').sheet1
 
