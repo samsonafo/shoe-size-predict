@@ -13,7 +13,7 @@ scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/aut
 # load model
 model = pickle.load(open('model.pkl','rb'))
 
-creds = ServiceAccountCredentials.from_json_keyfile_name('shoe-size.json', scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name('shoes.json', scope)
 
 client = gspread.authorize(creds)
 
@@ -39,11 +39,12 @@ def predict():
         
     # return data
     return render_template("result.html",prediction=result)
+
 @app.route('/final', methods=['POST','GET'])
 def final():
     final_data = dict(request.args)
-    collect2 = list(final_data.values())
-    details.insert_row(collect2, 2)
+    collect = list(final_data.values())
+    details.insert_row(collect, 2)
     return render_template("final.html")
 
 @app.route('/get-data',  methods=['GET'])
