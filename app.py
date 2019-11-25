@@ -1,10 +1,23 @@
+from flask import Flask, render_template, request
+from oauth2client.service_account import ServiceAccountCredentials
+from sklearn.model_selection import GridSearchCV
+from datetime import datetime
+import gspread
 import pandas as pd
-from flask import Flask, jsonify, request , render_template
 import pickle
 import numpy as np
 
+
+scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
+
 # load model
 model = pickle.load(open('model.pkl','rb'))
+
+creds = ServiceAccountCredentials.from_json_keyfile_name('shoe-size.json', scope)
+
+client = gspread.authorize(creds)
+
+details = client.open('shoe-size').sheet1
 
 # app
 app = Flask(__name__, template_folder='templates')
@@ -28,6 +41,9 @@ def predict():
     return render_template("result.html",prediction=result)
 @app.route('/final', methods=['POST','GET'])
 def final():
+    final_data = dict(request.args)
+    collect2 = list(final_data.values())
+    pred.insert_row(collect2, 2)
     return render_template("final.html")
 
 @app.route('/get-data',  methods=['GET'])
