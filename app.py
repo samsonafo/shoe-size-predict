@@ -42,8 +42,10 @@ def predict():
 
 @app.route('/final', methods=['POST','GET'])
 def final():
-    final_data = dict(request.args)
-    collect = list(final_data.values())
+    height = request.form['height']
+    sex_no = request.form['sex_no']
+    shoe_size = request.form['shoe_size']
+    collect = [height,sex_no,shoe_size]
     sheet.insert_row(collect, 2)
     return render_template("final.html")
 
