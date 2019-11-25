@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from oauth2client.service_account import ServiceAccountCredentials
-from sklearn.model_selection import GridSearchCV
+from pprint import pprint
 from datetime import datetime
 import gspread
 import pandas as pd
@@ -43,7 +43,7 @@ def predict():
 def final():
     final_data = dict(request.args)
     collect2 = list(final_data.values())
-    pred.insert_row(collect2, 2)
+    details.insert_row(collect2, 2)
     return render_template("final.html")
 
 @app.route('/get-data',  methods=['GET'])
