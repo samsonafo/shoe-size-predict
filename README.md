@@ -7,4 +7,4 @@ The Algorithm was built using random forest.
 
 Check out the app using this link: https://shoe-size-predict.herokuapp.com/
 
-Further retraining will be done in the future as more data is accumulated.
+The model will be retrained as new data is collected.
