@@ -63,7 +63,7 @@ def getdata():
 
 @app.route('/final1',  methods=['POST'])
 
-def getdata():   
+def final1():   
     return render_template("final1.html")
 
 if __name__ == '__home__':
