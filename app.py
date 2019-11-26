@@ -61,9 +61,9 @@ def final():
 def getdata():   
     return render_template("get-data.html")
 
-@app.route('/final1',  methods=['GET'])
+@app.route('/final1')
 
-def fina():   
+def final1():   
     return render_template("final1.html")
 
 if __name__ == '__home__':
