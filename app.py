@@ -30,7 +30,7 @@ app = Flask(__name__, template_folder='templates')
 # routes
 @app.route('/',  methods=['GET'])
 def home():
-    return render_template("home.html")
+    return render_template("home1.html")
 
 @app.route('/result',  methods=['POST'])
 def predict():
@@ -46,7 +46,7 @@ def predict():
     # return data
     return render_template("result.html",prediction=result)
 
-@app.route('/final', methods=['POST','GET'])
+@app.route('/final', methods=['GET'])
 def final():
     height = request.form['height']
     sex_no = request.form['sex_no']
