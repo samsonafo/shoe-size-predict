@@ -1,4 +1,5 @@
 shoes.json
+*.json
 new.json
 shoe-size.json
 .ipynb_checkpoints/
