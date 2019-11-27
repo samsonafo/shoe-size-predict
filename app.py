@@ -46,7 +46,7 @@ def predict():
     # return data
     return render_template("result.html",prediction=result)
 
-@app.route('/final', methods=['POST','GET'])
+@app.route('/final', methods=['POST'])
 def final():
     height = request.form['height']
     sex_no = request.form['sex_no']
