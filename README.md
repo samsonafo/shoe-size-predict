@@ -5,7 +5,7 @@ Here we build a shoe-size predictor from Height. This is to be deployed online. 
 
 The Algorithm was built using random forest.Here is the home page:
 
-![Shoe-Size-Shoe-Predictor](Shoe-Size-Screenshot) 
+![Shoe-Size-Shoe-Predictor](Shoe-Size-Screenshot.png) 
 
 Check out the app using this link: https://shoe-size-predict.herokuapp.com/
 
