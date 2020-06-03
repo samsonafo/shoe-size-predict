@@ -15,7 +15,7 @@ The model will be retrained as new data is collected.
 
 ## Files
 
-data assembly and cleaning:  for cleaning data scrapped online. \
+data assembly and cleaning:  for cleaning data scrapped online.
 
 data_merge:  updating cleaned data plus new data.
 
