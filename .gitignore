@@ -3,3 +3,5 @@ shoes.json
 new.json
 shoe-size.json
 .ipynb_checkpoints/
+.DS_Store
+*.csv
