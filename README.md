@@ -10,3 +10,13 @@ The Algorithm was built using random forest.Here is the home page:
 Check out the app using this link: https://shoe-size-predict.herokuapp.com/
 
 The model will be retrained as new data is collected.
+
+
+
+## Files
+
+data assembly and cleaning:  for cleaning data scrapped online.
+data_merge:  updating cleaned data plus new data.
+
+
+
